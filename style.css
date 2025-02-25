@@ -1,0 +1,136 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Header Styling */
+header {
+  background-color: #080404;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Content Section */
+.content {
+  max-width: 800px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.text {
+  display: flex;
+  padding-top: 50px;
+}
+
+.text p {
+  width: 80%;
+  padding-left: 50px;
+  margin-right:50px ;
+}
+
+.text-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  /* flex-direction: row-reverse; */
+  /* This moves the image to the right */
+}
+
+.image-left {
+  width: 180px;
+  height: 200px;
+  border-radius: 10px;
+  margin-left: 15px;
+  /* Optional: Adds space between text and image */
+}
+
+.text-right {
+  flex: 1;
+  text-align: left;
+  
+  
+  
+  
+}
+
+/* Circular Image */
+.image-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #e7e8e9;
+  display: block;
+  margin-left: 15px;
+  /* Optional: Adds space between text and image */
+}
+
+/* Testimonial Slider */
+.testimonial-slider {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.testimonial {
+  display: none;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.active {
+  display: block;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  background: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #120d0d;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}

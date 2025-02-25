@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>My Website</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="text-image">
+      <!-- The image is moved to the right with flex-direction: row-reverse -->
+      <img src="image 1.jpg" alt="women" class="image-left">
+
+      <br>
+      <p class="text-right">Hello! I'm Lorel, a passionate web developer with a keen eye for design and a love for problem-solving. Over the years, I've honed my skills through a variety of projects that blend creativity with technical expertise. This portfolio is a showcase of my work, experiences, and the projects that I'm most proud of. I believe in continuous learning and innovation, and I'm always excited to take on new challenges. Feel free to explore my work, and don't hesitate to reach out if you'd like to collaborate or learn more about my journey.</p>
+      <br>
+    </div>
+
+    <div class="text">
+      <p>Hello! I'm Sunny, a passionate graphic designer with a keen eye for design and a love for problem-solving. Over the years, I've honed my skills through a variety of projects that blend creativity with technical expertise. This portfolio is a showcase of my work, experiences, and the projects that I'm most proud of. I believe in continuous learning and innovation, and I'm always excited to take on new challenges. Feel free to explore my work, and don't hesitate to reach out if you'd like to collaborate or learn more about my journey.</p>
+
+      <img src="image.2.jpg" alt="circular image" class="image-circle">
+    </div>
+
+    <!-- Testimonial Slider -->
+    <div class="testimonial-slider">
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+
+      <div class="testimonial active">
+        <p>"I loved Lorel's work, well done!"</p>
+        <h4>- John Doe</h4>
+      </div>
+
+      <div class="testimonial">
+        <p>"Amazing experience! The team is very professional and helpful."</p>
+        <h4>- Jane Smith</h4>
+      </div>
+
+      <div class="testimonial">
+        <p>"Great quality and timely service. Will use again!"</p>
+        <h4>- Emily Brown</h4>
+      </div>
+
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+      let index = 0;
+
+      function showSlide(n) {
+        let slides = document.getElementsByClassName("testimonial");
+        if (n >= slides.length) index = 0;
+        if (n < 0) index = slides.length - 1;
+
+        // Hide all slides
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        // Show current slide
+        slides[index].style.display = "block";
+      }
+
+      function changeSlide(n) {
+        index += n;
+        showSlide(index);
+      }
+
+      // Auto Slide Every 3 Seconds
+      setInterval(() => {
+        changeSlide(1);
+      }, 3000);
+
+      // Initialize First Slide
+      showSlide(index);
+    </script>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 My Website | All Rights Reserved
+  </footer>
+
+</body>
+
+</html>
